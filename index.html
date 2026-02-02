@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap Step Container</title>
+    <title>Bootstrap Grid Web Page</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,57 +12,74 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="#">My App</a>
-        <div class="navbar-nav">
-            <a class="nav-link" href="#" onclick="showStep(1)">Step 1</a>
-            <a class="nav-link" href="#" onclick="showStep(2)">Step 2</a>
-            <a class="nav-link" href="#" onclick="showStep(3)">Step 3</a>
-        </div>
+        <a class="navbar-brand" href="#">MyWebsite</a>
     </div>
 </nav>
 
 <!-- Main Container -->
 <div class="container mt-4">
 
-    <div id="step1" class="card">
-        <div class="card-body">
-            <h4 class="card-title">Step 1</h4>
-            <p class="card-text">Welcome to Step 1</p>
-            <button class="btn btn-primary" onclick="showStep(2)">Next</button>
+    <!-- Row 1 -->
+    <div class="row">
+        <div class="col-12">
+            <div class="p-4 bg-primary text-white rounded">
+                <h2>Welcome</h2>
+                <p>This is a Bootstrap Grid based webpage.</p>
+            </div>
         </div>
     </div>
 
-    <div id="step2" class="card d-none">
-        <div class="card-body">
-            <h4 class="card-title">Step 2</h4>
-            <p class="card-text">Enter your details</p>
-            <button class="btn btn-secondary" onclick="showStep(1)">Back</button>
-            <button class="btn btn-primary" onclick="showStep(3)">Next</button>
+    <!-- Row 2 -->
+    <div class="row mt-4">
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 bg-light border rounded">
+                <h4>Column 1</h4>
+                <p>Left content</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 bg-light border rounded">
+                <h4>Column 2</h4>
+                <p>Middle content</p>
+            </div>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 bg-light border rounded">
+                <h4>Column 3</h4>
+                <p>Right content</p>
+            </div>
         </div>
     </div>
 
-    <div id="step3" class="card d-none">
-        <div class="card-body">
-            <h4 class="card-title">Step 3</h4>
-            <p class="card-text">Completed successfully ✅</p>
-            <button class="btn btn-secondary" onclick="showStep(2)">Back</button>
+    <!-- Row 3 -->
+    <div class="row mt-4">
+        <div class="col-md-6 col-sm-12">
+            <div class="p-3 bg-warning rounded">
+                <h4>Left Section</h4>
+                <p>50% width on desktop</p>
+            </div>
+        </div>
+
+        <div class="col-md-6 col-sm-12">
+            <div class="p-3 bg-info text-white rounded">
+                <h4>Right Section</h4>
+                <p>50% width on desktop</p>
+            </div>
         </div>
     </div>
 
 </div>
 
+<!-- Footer -->
+<footer class="bg-dark text-white text-center p-3 mt-4">
+    © 2026 MyWebsite
+</footer>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-<script>
-    function showStep(step) {
-        document.getElementById("step1").classList.add("d-none");
-        document.getElementById("step2").classList.add("d-none");
-        document.getElementById("step3").classList.add("d-none");
-
-        document.getElementById("step" + step).classList.remove("d-none");
-    }
-</script>
-
 </body>
 </html>
+
