@@ -2,89 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Responsive Page</title>
+    <title>Responsive Navbar with Dropdown</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-    <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">Dashboard</a>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">MyWebsite</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <!-- Toggle button (mobile view) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav me-auto">
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Overview</a>
+                    <a class="nav-link active" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Reports</a>
-                </li>
-            </ul>
 
-            <!-- Name Dropdown -->
-            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+                <!-- Dropdown -->
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown">
-                        👤 Name
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Name
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">My Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Account</a></li>
-                        <li><a class="dropdown-item" href="#">Help</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
                     </ul>
                 </li>
-            </ul>
 
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
 
-<!-- Content -->
-<div class="container mt-4">
-    <div class="row g-4">
-
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card h-100">
-                <div class="card-body">
-                    <h5 class="card-title">Card One</h5>
-                    <p class="card-text">Responsive card content.</p>
-                </div>
-            </div>
+<!-- Main Content -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <h2>Responsive Page</h2>
+            <p>
+                This page uses Bootstrap navigation bar with a dropdown menu.
+                On mobile screens, the navbar collapses automatically.
+            </p>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card h-100 bg-primary text-white">
-                <div class="card-body">
-                    <h5 class="card-title">Card Two</h5>
-                    <p class="card-text">Different color layout.</p>
-                </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="p-3 bg-light border rounded">
+                <h5>Side Content</h5>
+                <p>Bootstrap grid makes this responsive.</p>
             </div>
         </div>
-
-        <div class="col-lg-4 col-md-12 col-sm-12">
-            <div class="card h-100 bg-warning">
-                <div class="card-body">
-                    <h5 class="card-title">Card Three</h5>
-                    <p class="card-text">Stacks on mobile.</p>
-                </div>
-            </div>
-        </div>
-
     </div>
 </div>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-3 mt-5">
-    Responsive Page © 2026
+<footer class="bg-dark text-white text-center p-3 mt-5">
+    © 2026 MyWebsite
 </footer>
 
 <!-- Bootstrap JS -->
@@ -92,3 +81,4 @@
 
 </body>
 </html>
+
