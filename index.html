@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Responsive Page with Dropdown</title>
+    <title>Navbar Dropdown Columns</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -11,38 +11,29 @@
 <body>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">MyApp</a>
+        <a class="navbar-brand fw-bold" href="#">MyWebsite</a>
 
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link active" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
 
-            <!-- Name Dropdown -->
-            <ul class="navbar-nav">
+                <!-- Dropdown -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                        👤 John Doe
+                        Columns
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item text-danger" href="#">Logout</a></li>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#col1">Column 1</a></li>
+                        <li><a class="dropdown-item" href="#col2">Column 2</a></li>
+                        <li><a class="dropdown-item" href="#col3">Column 3</a></li>
                     </ul>
                 </li>
             </ul>
@@ -50,41 +41,49 @@
     </div>
 </nav>
 
-<!-- Main Content -->
+<!-- Content -->
 <div class="container mt-5">
     <div class="row g-4">
-        <div class="col-lg-4 col-md-6 col-sm-12">
+
+        <div class="col-lg-4 col-md-6 col-sm-12" id="col1">
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
-                    <h5 class="card-title">Card One</h5>
-                    <p class="card-text">This card adjusts based on screen size.</p>
+                    <h5 class="card-title">Column 1</h5>
+                    <p class="card-text">
+                        This is content for column one. On mobile, it stacks.
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-12">
-            <div class="card h-100 shadow-sm bg-primary text-white">
+        <div class="col-lg-4 col-md-6 col-sm-12" id="col2">
+            <div class="card h-100 shadow-sm bg-success text-white">
                 <div class="card-body">
-                    <h5 class="card-title">Card Two</h5>
-                    <p class="card-text">Responsive and colorful.</p>
+                    <h5 class="card-title">Column 2</h5>
+                    <p class="card-text">
+                        Responsive layout using Bootstrap grid system.
+                    </p>
                 </div>
             </div>
         </div>
 
-        <div class="col-lg-4 col-md-12 col-sm-12">
+        <div class="col-lg-4 col-md-12 col-sm-12" id="col3">
             <div class="card h-100 shadow-sm bg-warning">
                 <div class="card-body">
-                    <h5 class="card-title">Card Three</h5>
-                    <p class="card-text">Stacks neatly on mobile.</p>
+                    <h5 class="card-title">Column 3</h5>
+                    <p class="card-text">
+                        Automatically adjusts based on screen size.
+                    </p>
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-3 mt-5">
-    © 2026 MyApp
+    © 2026 Responsive Page
 </footer>
 
 <!-- Bootstrap JS -->
@@ -92,3 +91,4 @@
 
 </body>
 </html>
+
