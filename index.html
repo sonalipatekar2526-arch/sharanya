@@ -2,78 +2,77 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap Grid Web Page</title>
+    <title>Responsive Navbar with Dropdown</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<!-- Navbar -->
+<!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
         <a class="navbar-brand" href="#">MyWebsite</a>
+
+        <!-- Toggle button (mobile view) -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="navbarMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+
+                <!-- Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                        Name
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>
 
-<!-- Main Container -->
-<div class="container mt-4">
-
-    <!-- Row 1 -->
+<!-- Main Content -->
+<div class="container mt-5">
     <div class="row">
-        <div class="col-12">
-            <div class="p-4 bg-primary text-white rounded">
-                <h2>Welcome</h2>
-                <p>This is a Bootstrap Grid based webpage.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Row 2 -->
-    <div class="row mt-4">
-        <div class="col-md-4 col-sm-12">
-            <div class="p-3 bg-light border rounded">
-                <h4>Column 1</h4>
-                <p>Left content</p>
-            </div>
+        <div class="col-md-8 col-sm-12">
+            <h2>Responsive Page</h2>
+            <p>
+                This page uses Bootstrap navigation bar with a dropdown menu.
+                On mobile screens, the navbar collapses automatically.
+            </p>
         </div>
 
         <div class="col-md-4 col-sm-12">
             <div class="p-3 bg-light border rounded">
-                <h4>Column 2</h4>
-                <p>Middle content</p>
-            </div>
-        </div>
-
-        <div class="col-md-4 col-sm-12">
-            <div class="p-3 bg-light border rounded">
-                <h4>Column 3</h4>
-                <p>Right content</p>
+                <h5>Side Content</h5>
+                <p>Bootstrap grid makes this responsive.</p>
             </div>
         </div>
     </div>
-
-    <!-- Row 3 -->
-    <div class="row mt-4">
-        <div class="col-md-6 col-sm-12">
-            <div class="p-3 bg-warning rounded">
-                <h4>Left Section</h4>
-                <p>50% width on desktop</p>
-            </div>
-        </div>
-
-        <div class="col-md-6 col-sm-12">
-            <div class="p-3 bg-info text-white rounded">
-                <h4>Right Section</h4>
-                <p>50% width on desktop</p>
-            </div>
-        </div>
-    </div>
-
 </div>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center p-3 mt-4">
+<footer class="bg-dark text-white text-center p-3 mt-5">
     © 2026 MyWebsite
 </footer>
 
@@ -82,4 +81,5 @@
 
 </body>
 </html>
+
 
